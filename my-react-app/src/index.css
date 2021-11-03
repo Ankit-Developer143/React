@@ -12,5 +12,6 @@ code {
     monospace;
 }
 .container{
-  text-align: center;
+  align-items: center;
+  margin: 5% 10%  0% 10%;
 }

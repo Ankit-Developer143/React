@@ -1,10 +1,10 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { About } from '../About';
 
 
 function UserServices() {
-    const [users,setUser] = useState([]);
+    const [users, setUser] = useState([]);
     const callBackendAPI = async () => {
         // const response = await fetch('/getData');
         // const body = await response.json();
@@ -43,37 +43,37 @@ function UserServices() {
         // console.log(body);
         // setUser(body)
 
-      //const response = await axios.get('/getData');
-      // console.log("Hello",response.data);
-      // setUser([response.data])
-      // console.log(users);
+        //const response = await axios.get('/getData');
+        // console.log("Hello",response.data);
+        // setUser([response.data])
+        // console.log(users);
 
-      // const requestOptions = {
-      //   firstName: 'React POSTssss Request Example'
-      // };
-      // const response = await axios.post('/addData', requestOptions);
-      // console.log("Hello", response.data);
+        // const requestOptions = {
+        //   firstName: 'React POSTssss Request Example'
+        // };
+        // const response = await axios.post('/addData', requestOptions);
+        // console.log("Hello", response.data);
 
-      // const requestOptions = {
-      //   firstName: 'React new Request Example'
-      // };
-      // const id = "6182345973c90ab0cbbaa732"
-      // const response = await axios.put(`/${id}`, requestOptions);
-      // console.log(response.data);
+        // const requestOptions = {
+        //   firstName: 'React new Request Example'
+        // };
+        // const id = "6182345973c90ab0cbbaa732"
+        // const response = await axios.put(`/${id}`, requestOptions);
+        // console.log(response.data);
 
-      // const id = "6182345973c90ab0cbbaa732"
-      // const response = await axios.delete(`/${id}`);
-      // console.log(response.data);
-    
+        // const id = "6182345973c90ab0cbbaa732"
+        // const response = await axios.delete(`/${id}`);
+        // console.log(response.data);
 
 
-  };
+
+    };
     return (
         <div>
             <h1>Work User</h1>
             <button onClick={callBackendAPI}>Call</button>
-            <About  message="Data from first component"/>
-            
+            <About message="Data from first component" />
+
         </div>
     )
 }
