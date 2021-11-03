@@ -41,15 +41,6 @@ export default function Home() {
                     Submit
                 </Button>
             </Form>
-            <div>
-                {/* {
-                    allEntry.map((curr) => {
-                        return (
-                            <p>Hello, {curr.email}</p>
-                        )
-                    })
-                } */}
-            </div>
         </div>
     )
 
