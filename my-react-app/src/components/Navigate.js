@@ -1,42 +1,24 @@
 import React from 'react';
-// import { useHistory } from "react-router-dom";
-import { Route, Link, BrowserRouter } from 'react-router-dom'
-import { About } from './About';
-import Home from './Home';
-import Shop from './shop';
+import { Navbar, Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Navigate() {
-    // const history = useHistory();
-
-  function handleClick() {
-    // history.push("/home");
-  }
-    return (
-        // <div>
-        //     <h1>Navigate works</h1>
-        //     <button type="button" onClick={handleClick}>
-        //         Go home
-        //     </button>
-        // </div>
-        < BrowserRouter >
+   return (
       <div>
-         <ul>
-            <li>
-               <Link to="/home">Home</Link>
-            </li>
-            <li>
-               <Link to="/about">About</Link>
-            </li>
-            <li>
-               <Link to="/shop">shop</Link>
-            </li>
-         </ul>
-         <Route exact path="/home" component={Home} />
-         <Route path="/about" component={About} />
-         <Route path="/shop" component={Shop} />
+         <Navbar bg="light" expand="lg">
+            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+               <Nav className="me-auto">
+                  <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="/shop">Shop</Nav.Link>
+                  <Nav.Link href="/about">About</Nav.Link>
+               </Nav>
+            </Navbar.Collapse>
+         </Navbar>
       </div>
-   </ BrowserRouter >
-    )
+   )
 }
 
 export default Navigate
+
