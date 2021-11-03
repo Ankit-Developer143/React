@@ -6,10 +6,11 @@ export default function Home() {
         const [password, setPassword] = useState("");
         const [allEntry,setAllEntry] = useState([]);
     
-       const submitForm = (e) =>{
+       const submitForm = async (e) =>{
             e.preventDefault();
-            const newEntry = {email:email,password:password};
-            setAllEntry([...allEntry,newEntry])
+            const newEntry = await {email:email,password:password};
+           await setAllEntry([...allEntry,newEntry])
+           await console.log(allEntry);
         }
 
 
@@ -21,6 +22,16 @@ export default function Home() {
             <input type="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)}/><br />
             <button type="submit">Submit</button>
             </form>
+            <div>
+                {
+                     allEntry.map((curr) =>{
+                        return (
+                            <p>Hello, {curr.email}</p>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
+    
 }
